@@ -31,16 +31,24 @@ class HomeInteractor: HomeInteractorProtocol, HomeDataStore {
         
     }
     func callAPINewsList(){
-        
+        presenterHome?.responseNewsList()
+
         let urlToFetchData = "\(URL_BASE)?sources=google-news&apiKey=\(KEY_API)"
-        let request = AF.request(urlToFetchData).response{ response in
+        _ = AF.request(urlToFetchData).response{ response in
 
             switch response.result {
             case .success(let data):
 //                let response = data as! NSDictionary
                 do{
                 let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
-                    print(json?["articles"])
+//                    print(json?["articles"])
+                    
+                    if let arrArticales = json?["articles"] as? NSArray{
+                        print("All articales loaded : \(arrArticales.count)")
+                    }
+                    
+                    self.presenterHome?.responseNewsList()
+
                 }catch{ print("erroMsg") }
 
                 break
@@ -50,7 +58,6 @@ class HomeInteractor: HomeInteractorProtocol, HomeDataStore {
 
         }
 
-        presenterHome?.responseNewsList()
     }
 }
 

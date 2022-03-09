@@ -18,7 +18,6 @@
 		652A85CA27D846FC004A60AE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A85C427D846FC004A60AE /* HomeInteractor.swift */; };
 		659249F727D6565E0076E6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659249F627D6565E0076E6B5 /* AppDelegate.swift */; };
 		659249FE27D6565E0076E6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659249FC27D6565E0076E6B5 /* Main.storyboard */; };
-		65924A0127D6565E0076E6B5 /* DRCPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 659249FF27D6565E0076E6B5 /* DRCPractical.xcdatamodeld */; };
 		65924A0327D656620076E6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65924A0227D656620076E6B5 /* Assets.xcassets */; };
 		65924A0627D656620076E6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65924A0427D656620076E6B5 /* LaunchScreen.storyboard */; };
 		65924A1127D656620076E6B5 /* DRCPracticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65924A1027D656620076E6B5 /* DRCPracticalTests.swift */; };
@@ -29,9 +28,9 @@
 		6597CE0727D862B600010F12 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0627D862B600010F12 /* DatabaseHelper.swift */; };
 		6597CE0827D862B600010F12 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0627D862B600010F12 /* DatabaseHelper.swift */; };
 		6597CE0B27D862F300010F12 /* DRCPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0927D862F300010F12 /* DRCPractical.xcdatamodeld */; };
-		6597CE0C27D862F300010F12 /* DRCPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0927D862F300010F12 /* DRCPractical.xcdatamodeld */; };
 		6597CE0F27D863C300010F12 /* TableArticales+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0E27D863C300010F12 /* TableArticales+Helper.swift */; };
 		6597CE1027D863C300010F12 /* TableArticales+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0E27D863C300010F12 /* TableArticales+Helper.swift */; };
+		6597CE1127D8664F00010F12 /* DRCPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0927D862F300010F12 /* DRCPractical.xcdatamodeld */; };
 		65A1A75C27D84848005F10DC /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75927D84848005F10DC /* NewsDetailPresenter.swift */; };
 		65A1A75D27D84848005F10DC /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75927D84848005F10DC /* NewsDetailPresenter.swift */; };
 		65A1A75E27D84848005F10DC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75A27D84848005F10DC /* NewsDetailViewController.swift */; };
@@ -72,7 +71,6 @@
 		659249F327D6565E0076E6B5 /* DRCPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRCPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659249F627D6565E0076E6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659249FD27D6565E0076E6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		65924A0027D6565E0076E6B5 /* DRCPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DRCPractical.xcdatamodel; sourceTree = "<group>"; };
 		65924A0227D656620076E6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65924A0527D656620076E6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65924A0727D656620076E6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				65924A0227D656620076E6B5 /* Assets.xcassets */,
 				65924A0427D656620076E6B5 /* LaunchScreen.storyboard */,
 				65924A0727D656620076E6B5 /* Info.plist */,
-				659249FF27D6565E0076E6B5 /* DRCPractical.xcdatamodeld */,
 			);
 			path = DRCPractical;
 			sourceTree = "<group>";
@@ -518,7 +515,6 @@
 				6597CE0F27D863C300010F12 /* TableArticales+Helper.swift in Sources */,
 				65A1A76027D84848005F10DC /* NewsDetailInteractor.swift in Sources */,
 				652A85C527D846FC004A60AE /* HomePresenter.swift in Sources */,
-				65924A0127D6565E0076E6B5 /* DRCPractical.xcdatamodeld in Sources */,
 				6597CE0727D862B600010F12 /* DatabaseHelper.swift in Sources */,
 				65A1A76427D84D61005F10DC /* CellNews.swift in Sources */,
 				6597CE0B27D862F300010F12 /* DRCPractical.xcdatamodeld in Sources */,
@@ -540,12 +536,12 @@
 				65924A1127D656620076E6B5 /* DRCPracticalTests.swift in Sources */,
 				65A1A76127D84848005F10DC /* NewsDetailInteractor.swift in Sources */,
 				6597CE0527D8628700010F12 /* CoreDataStack.swift in Sources */,
+				6597CE1127D8664F00010F12 /* DRCPractical.xcdatamodeld in Sources */,
 				652A85C627D846FC004A60AE /* HomePresenter.swift in Sources */,
 				652A85C827D846FC004A60AE /* HomeViewController.swift in Sources */,
 				6597CE0827D862B600010F12 /* DatabaseHelper.swift in Sources */,
 				652A85CA27D846FC004A60AE /* HomeInteractor.swift in Sources */,
 				65A1A76527D84D61005F10DC /* CellNews.swift in Sources */,
-				6597CE0C27D862F300010F12 /* DRCPractical.xcdatamodeld in Sources */,
 				65A1A75D27D84848005F10DC /* NewsDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,16 +908,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		659249FF27D6565E0076E6B5 /* DRCPractical.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				65924A0027D6565E0076E6B5 /* DRCPractical.xcdatamodel */,
-			);
-			currentVersion = 65924A0027D6565E0076E6B5 /* DRCPractical.xcdatamodel */;
-			path = DRCPractical.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		6597CE0927D862F300010F12 /* DRCPractical.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
