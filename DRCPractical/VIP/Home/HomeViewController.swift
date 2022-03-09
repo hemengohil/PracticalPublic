@@ -75,6 +75,8 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CellNews = tableView.dequeueReusableCell(withIdentifier: CellNews.identifierCell) as! CellNews
+        
+        cell.contentView.backgroundColor = .clear
         return cell
 
     }
