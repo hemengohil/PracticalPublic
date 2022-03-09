@@ -7,7 +7,6 @@ target 'DRCPractical' do
 
   # Pods for DRCPractical
   pod 'Alamofire'
-  pod 'SDWebImage'
   
   target 'DRCPracticalTests' do
     inherit! :search_paths

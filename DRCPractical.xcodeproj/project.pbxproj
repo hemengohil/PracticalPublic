@@ -33,6 +33,7 @@
 		6597CE1127D8664F00010F12 /* DRCPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE0927D862F300010F12 /* DRCPractical.xcdatamodeld */; };
 		6597CE1327D869DB00010F12 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE1227D869DB00010F12 /* Date+Helper.swift */; };
 		6597CE1427D869DB00010F12 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE1227D869DB00010F12 /* Date+Helper.swift */; };
+		6597CE1627D86CE000010F12 /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CE1527D86CDF00010F12 /* UIImageView+Helper.swift */; };
 		65A1A75C27D84848005F10DC /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75927D84848005F10DC /* NewsDetailPresenter.swift */; };
 		65A1A75D27D84848005F10DC /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75927D84848005F10DC /* NewsDetailPresenter.swift */; };
 		65A1A75E27D84848005F10DC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1A75A27D84848005F10DC /* NewsDetailViewController.swift */; };
@@ -86,6 +87,7 @@
 		6597CE0A27D862F300010F12 /* DRCPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DRCPractical.xcdatamodel; sourceTree = "<group>"; };
 		6597CE0E27D863C300010F12 /* TableArticales+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableArticales+Helper.swift"; sourceTree = "<group>"; };
 		6597CE1227D869DB00010F12 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		6597CE1527D86CDF00010F12 /* UIImageView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
 		65A1A75927D84848005F10DC /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
 		65A1A75A27D84848005F10DC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		65A1A75B27D84848005F10DC /* NewsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailInteractor.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				6597CE1227D869DB00010F12 /* Date+Helper.swift */,
+				6597CE1527D86CDF00010F12 /* UIImageView+Helper.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				6597CE0B27D862F300010F12 /* DRCPractical.xcdatamodeld in Sources */,
 				65A1A75C27D84848005F10DC /* NewsDetailPresenter.swift in Sources */,
 				6597CE0427D8628700010F12 /* CoreDataStack.swift in Sources */,
+				6597CE1627D86CE000010F12 /* UIImageView+Helper.swift in Sources */,
 				65A1A75E27D84848005F10DC /* NewsDetailViewController.swift in Sources */,
 				659249F727D6565E0076E6B5 /* AppDelegate.swift in Sources */,
 				652A85C927D846FC004A60AE /* HomeInteractor.swift in Sources */,

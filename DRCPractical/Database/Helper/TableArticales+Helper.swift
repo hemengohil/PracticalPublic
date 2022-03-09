@@ -44,7 +44,22 @@ extension ArticlesCDM{
             
             tblRecorded.newsURL = newsURL
             tblRecorded.newsImage = newsImage
-            tblRecorded.newsDate = Date()
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            
+            if let stringDate = newsDate{
+                let getDate = stringDate.replacingOccurrences(of: "TO", with: " ")
+                if let date = dateFormatter.date(from:getDate){
+                    tblRecorded.newsDate = date
+                }else{
+                    tblRecorded.newsDate = Date()
+                }
+            }else{
+                tblRecorded.newsDate = Date()
+            }
+
 
             CoreDataStack.shared.saveContext()
             return true
@@ -70,9 +85,7 @@ extension ArticlesCDM{
             return
         }
         if let isSuccess = ArticlesCDM.createUser(author: author, title: title, newsURL: newsURL, newsImage: newsImage, newsDate: newsDate){
-            print("Success DB \(isSuccess)")
+            print("DB data recorded. \(isSuccess)")
         }
-        
     }
-
 }

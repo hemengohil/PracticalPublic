@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol HomeProtocol: AnyObject {
     func callSomething()
     func responseNewsList(articlesList: [ArticlesCDM]?)
@@ -96,6 +97,11 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         cell.lblName.text = objArtical?.author
         cell.lblLink.text = objArtical?.newsURL
         cell.lblDate.text = Date().localizedDescription
+        
+        if let url = URL(string: objArtical?.newsImage ?? "")
+        {
+            cell.imgHead.load(url: url)
+        }
         cell.contentView.backgroundColor = .clear
         cell.selectionStyle = .none
         return cell
@@ -113,3 +119,16 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
 
 
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
