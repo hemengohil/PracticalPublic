@@ -6,7 +6,9 @@ target 'DRCPractical' do
   use_frameworks!
 
   # Pods for DRCPractical
-
+  pod 'Alamofire'
+  
+  
   target 'DRCPracticalTests' do
     inherit! :search_paths
     # Pods for testing

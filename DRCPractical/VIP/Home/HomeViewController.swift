@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeProtocol: AnyObject {
     func callSomething()
+    func responseNewsList()
 }
 
 class HomeViewController: UIViewController, HomeProtocol {
@@ -57,14 +58,23 @@ class HomeViewController: UIViewController, HomeProtocol {
         super.viewDidLoad()
         
         self.title = "List"
-        self.tblView.reloadData()
+        DispatchQueue.main.async {
+            self.fetchNewsList()
+        }
     }
     
     // MARK: Call something
-    
+    func fetchNewsList(){
+        self.presenterHome?.fetchNewListData()
+    }
+    func responseNewsList(){
+        self.tblView.reloadData()
+
+    }
     func callSomething() {
         
     }
+    
 }
 
 extension HomeViewController: UITableViewDelegate,UITableViewDataSource{

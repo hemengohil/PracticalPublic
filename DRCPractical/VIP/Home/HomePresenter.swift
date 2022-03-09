@@ -10,6 +10,10 @@ import UIKit
 
 protocol HomePresentationProtocol {
     func callSomething()
+    
+    func fetchNewListData()
+    func responseNewsList()
+
 }
 
 class HomePresenter: HomePresentationProtocol {
@@ -21,5 +25,11 @@ class HomePresenter: HomePresentationProtocol {
     // MARK: Present something
     func callSomething() {
         
+    }
+    func fetchNewListData(){
+        interactorHome?.callAPINewsList()
+    }
+    func responseNewsList(){
+        viewControllerHome?.responseNewsList()
     }
 }
