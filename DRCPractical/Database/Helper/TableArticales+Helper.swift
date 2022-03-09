@@ -52,5 +52,27 @@ extension ArticlesCDM{
         return false
     }
 
+    static func createArtical(dict: NSDictionary){
+        
+        guard let author = dict.value(forKey: "author") as? String else {
+            return
+        }
+        guard let title = dict.value(forKey: "title") as? String  else {
+            return
+        }
+        guard let newsURL = dict.value(forKey: "url") as? String  else {
+            return
+        }
+        guard let newsImage = dict.value(forKey: "urlToImage") as? String  else {
+            return
+        }
+        guard let newsDate = dict.value(forKey: "publishedAt") as? String  else {
+            return
+        }
+        if let isSuccess = ArticlesCDM.createUser(author: author, title: title, newsURL: newsURL, newsImage: newsImage, newsDate: newsDate){
+            print("Success DB \(isSuccess)")
+        }
+        
+    }
 
 }

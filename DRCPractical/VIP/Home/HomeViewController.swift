@@ -10,10 +10,11 @@ import UIKit
 
 protocol HomeProtocol: AnyObject {
     func callSomething()
-    func responseNewsList()
+    func responseNewsList(articlesList: [ArticlesCDM]?)
 }
 
 class HomeViewController: UIViewController, HomeProtocol {
+    
 
     // MARK: Objects & Variables
     var presenterHome: HomePresentationProtocol?
@@ -21,6 +22,9 @@ class HomeViewController: UIViewController, HomeProtocol {
     // MARK: IBOutlets
     @IBOutlet weak var tblView: UITableView!
 
+    
+    var arrArticles: [ArticlesCDM]?
+    
     // MARK: Object lifecycle
     /*
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -67,9 +71,10 @@ class HomeViewController: UIViewController, HomeProtocol {
     func fetchNewsList(){
         self.presenterHome?.fetchNewListData()
     }
-    func responseNewsList(){
+    
+    func responseNewsList(articlesList: [ArticlesCDM]?){
+        self.arrArticles = articlesList
         self.tblView.reloadData()
-
     }
     func callSomething() {
         
@@ -79,19 +84,28 @@ class HomeViewController: UIViewController, HomeProtocol {
 
 extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.arrArticles?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CellNews = tableView.dequeueReusableCell(withIdentifier: CellNews.identifierCell) as! CellNews
         
+        let objArtical = self.arrArticles?[indexPath.row]
+        
+        cell.lblTitle.text = objArtical?.title
+        cell.lblName.text = objArtical?.author
+        cell.lblLink.text = objArtical?.newsURL
+        cell.lblDate.text = Date().localizedDescription
         cell.contentView.backgroundColor = .clear
         cell.selectionStyle = .none
         return cell
 
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let objArtical = self.arrArticles?[indexPath.row]
         let objNewsDetails = self.storyboard?.instantiateViewController(withIdentifier: NewsDetailViewController.storyIdentifier) as! NewsDetailViewController
+        objNewsDetails.urlToLoad = objArtical?.newsURL ?? "https://www.google.com"
         self.navigationController?.pushViewController(objNewsDetails, animated: true)
     }
 

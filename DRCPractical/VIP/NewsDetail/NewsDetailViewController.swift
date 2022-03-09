@@ -24,6 +24,8 @@ class NewsDetailViewController: UIViewController, NewsDetailProtocol {
     @IBOutlet var webView : WKWebView!
     @IBOutlet var progressView : UIProgressView!
 
+    
+    var urlToLoad = "https://www.google.com"
     // MARK: Object lifecycle
     /*
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -64,7 +66,7 @@ class NewsDetailViewController: UIViewController, NewsDetailProtocol {
 
         
         DispatchQueue.main.async {
-            let url = URL(string: "https://www.google.com")!
+            let url = URL(string: self.urlToLoad)!
             self.webView.load(URLRequest(url: url))
             self.webView.allowsBackForwardNavigationGestures = true
             self.webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
