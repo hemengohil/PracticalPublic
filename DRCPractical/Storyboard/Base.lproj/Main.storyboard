@@ -56,7 +56,7 @@
                                                                         <constraint firstAttribute="height" constant="22" id="j71-PR-0zh"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                                    <color key="textColor" systemColor="systemBlueColor"/>
+                                                                    <color key="textColor" systemColor="linkColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2V-Ye-QjP">
@@ -142,9 +142,38 @@
                     <view key="view" contentMode="scaleToFill" id="RX0-qq-vtJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te8-hK-tNV">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GFo-Zq-Sax">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Vyg-Pd-dVO"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ktq-ao-eYN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GFo-Zq-Sax" firstAttribute="top" secondItem="ktq-ao-eYN" secondAttribute="top" id="In7-LK-Q0D"/>
+                            <constraint firstItem="Te8-hK-tNV" firstAttribute="top" secondItem="ktq-ao-eYN" secondAttribute="top" constant="4" id="Lk1-WW-yWM"/>
+                            <constraint firstItem="GFo-Zq-Sax" firstAttribute="leading" secondItem="ktq-ao-eYN" secondAttribute="leading" id="SEd-e9-Czd"/>
+                            <constraint firstItem="ktq-ao-eYN" firstAttribute="trailing" secondItem="Te8-hK-tNV" secondAttribute="trailing" id="fnh-yI-T8T"/>
+                            <constraint firstItem="ktq-ao-eYN" firstAttribute="bottom" secondItem="Te8-hK-tNV" secondAttribute="bottom" id="kwe-XQ-aPp"/>
+                            <constraint firstItem="ktq-ao-eYN" firstAttribute="trailing" secondItem="GFo-Zq-Sax" secondAttribute="trailing" id="q4t-Ug-0ml"/>
+                            <constraint firstItem="Te8-hK-tNV" firstAttribute="leading" secondItem="ktq-ao-eYN" secondAttribute="leading" id="vc3-2Q-CVH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="GFo-Zq-Sax" id="sVh-NV-ZXd"/>
+                        <outlet property="webView" destination="Te8-hK-tNV" id="TRL-dc-LHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgM-T1-P13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,11 +200,11 @@
     </scenes>
     <resources>
         <image name="news_placeholder" width="100" height="75"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

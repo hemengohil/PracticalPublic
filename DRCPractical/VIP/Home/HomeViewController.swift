@@ -57,7 +57,6 @@ class HomeViewController: UIViewController, HomeProtocol {
         super.viewDidLoad()
         
         self.title = "List"
-        self.navigationController!.navigationBar.barTintColor = UIColor.white
         self.tblView.reloadData()
     }
     
@@ -77,10 +76,14 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         let cell:CellNews = tableView.dequeueReusableCell(withIdentifier: CellNews.identifierCell) as! CellNews
         
         cell.contentView.backgroundColor = .clear
+        cell.selectionStyle = .none
         return cell
 
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let objNewsDetails = self.storyboard?.instantiateViewController(withIdentifier: NewsDetailViewController.storyIdentifier) as! NewsDetailViewController
+        self.navigationController?.pushViewController(objNewsDetails, animated: true)
+    }
 
 }
 
